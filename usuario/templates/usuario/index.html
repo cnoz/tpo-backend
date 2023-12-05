@@ -9,12 +9,14 @@
   <link rel="shortcut icon" href="images/LogoET-2.png" type="image/x-icon">
   <!-- <link rel="stylesheet" href="css/styles.css"> -->
 
-  <title>{% block title %}{% endblock %} </title>
+  <title>{% block title %} {% endblock %} </title>
+
   {% load static %}
 
 </head>
 
 <body>
+  <!-- Cabecera -->
   <header class="menu-header">
     <div class="header-content">
       <div class="logo">
@@ -22,20 +24,18 @@
         <h1>Emplea Talento</h1>
           <nav class="user-options">
             <ul>
-              <li><a href=''>Home</a></li>
-              <li><a href='{$ url "empresas" %}'>Empresas</a></li>
-              <li><a href='{$ url "postulante" %}'> Postulantes</a></li>  
+              <li><a href='{% url "home" %}'>Home</a></li>
+              <!-- <li><a href=' "empresas" '>Empresas</a></li>
+              <li><a href=' "postulante" '> Postulantes</a></li>   -->
 
-              <li><a href='{$ url "contacto" %}'>Contacto</a></li>
+              <li><a href='{% url "contacto" %}'>Contacto</a></li>
             </ul>
           </nav>
       </div>  
     </div>
   </header>
-<!-- Cabecera -->
-<header>
 
-</header>
+
 
 
 <!-- main -->
@@ -55,7 +55,9 @@
       </div>
     </main>
     <br><br>
-    {% block headers %}  {% endblock %}
+    {% block content %}
+    
+    {% endblock %}
 
     <!-- <footer> Pie de pagina -->
   <footer>
