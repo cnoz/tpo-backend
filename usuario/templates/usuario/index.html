@@ -3,13 +3,14 @@
 <html lang="es">
 
 <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta Comisión: 23515 - Grupo: 13 - Integrantes: RAMÓN A. FUENTES (lider), FABIAN CORREA.>
   <link rel="shortcut icon" href="images/LogoET-2.png" type="image/x-icon">
-  <!-- <link rel="stylesheet" href="css/styles.css"> -->
+  <link rel="stylesheet" href="{% static 'usuario/css/styles.css' %}">
 
-  <title>{% block title %} {% endblock %} </title>
+  <title>{% block title %} Inicio {% endblock %} </title>
 
   {% load static %}
 
@@ -38,7 +39,8 @@
 
 
 
-<!-- main -->
+<!-- main --> 
+{% block content %}
   <main class="hero1">
       <div class="herotexto">
           <h2>Bienvenido a Emplea Talento</h2>
@@ -55,7 +57,7 @@
       </div>
     </main>
     <br><br>
-    {% block content %}
+  
     
     {% endblock %}
 
