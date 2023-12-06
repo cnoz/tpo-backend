@@ -20,8 +20,14 @@ from usuario import views
 
 urlpatterns = [
     path('',views.home ,name="home"),
+<<<<<<< HEAD
     path('contacto',views.contacto ,name="contacto"),
     path('postulantes',views.postulantes ,name="postulantes"),
     path('empresas',views.empresas ,name="empresas"),
+=======
+    path('postularse',views.postularse ,name="postularse"),
+    path('empresas',views.empresas ,name="empresas"),
+    path('contacto',views.contacto ,name="contacto"),
+>>>>>>> 1c8a6bbe9256083fafe17d261e44fcb9a964462b
     path('admin/', admin.site.urls),
 ]
