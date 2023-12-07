@@ -20,8 +20,9 @@ from usuario import views
 
 urlpatterns = [
     path('',views.home ,name="home"),
+    path('somos',views.somos ,name="somos"),
+    path('empresas',views.empresas ,name="empresas"),
+    path('postularse',views.postularse ,name="postularse"),
     path('contacto',views.contacto ,name="contacto"),
-    # path('postularse',views.postularse ,name="postularse"),
-    # path('empresas',views.empresas ,name="empresas"),
     path('admin/', admin.site.urls),
 ]
