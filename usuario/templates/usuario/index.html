@@ -62,38 +62,192 @@
 
 <!-- main --> 
 {% block content %}
-  <main class="hero1">
-      <div class="herotexto">
-          <h2>Bienvenido a Emplea Talento</h2>
-            <p><b>Empieza a construir tu perfil profesional para encontrar las mejores oportunidades laborales.</b></p>
-            <p><b>Desde nuestra fundación en 2004, hemos estado comprometidos con la misión de facilitar el acceso a empleos significativos. A lo largo de los años, hemos conectado a miles de profesionales con oportunidades que han transformado sus vidas.</b>
-            </p>
-            <p><b>Nuestros valores son el núcleo de todo lo que hacemos. La integridad guía nuestra ética, la innovación impulsa nuestra mejora constante, la empatía nos permite entender tus necesidades y la colaboración asegura que trabajemos juntos para alcanzar tus metas.</b></p>
-            <p><b>Ofrecemos una amplia gama de servicios diseñados para apoyarte en cada paso de tu búsqueda laboral. Desde encontrar 
-              oportunidades que se ajusten a tu perfil hasta brindarte herramientas para destacar en el proceso de selección, estamos aquí para ayudarte.</b></p>
-            <p><b>Nuestros resultados hablan por sí mismos. Hemos ayudado a más de 2000 clientes satisfechos a encontrar empleo  y seguimos creciendo. Tu éxito es nuestro mayor logro.</b></p>
-            <p><b>En Emplea Talento, estamos emocionados por la oportunidad de acompañarte en tu búsqueda laboral. Juntos, podemos lograr grandes cosas. <br> 
-            ¡Gracias por confiar en nosotros! <br><br>
-            ¡Gracias por acompañarnos!</b></p>
-      </div>
+  <main id="novedades">
+    <ul id="carrusel">
+      <li id="carruselPrincipal" class="carruseles">
+        <div class="contenedor">
+          <h1>Bienvenido a Emplea Talento</h1>
+          <h2>Empieza a construir tu perfil profesional
+            para encontrar las mejores oportunidades laborales.
+          </h2>
+        </div>
+      </li>
+      <li id="carruselDos" class="carruseles">
+        <div class="contenedor">
+          <h3>Descubre tu Próximo Paso Profesional</h3>
+          <h4>Encuentra el trabajo de tus sueños.
+            Explora una amplia gama de oportunidades laborales
+            y da el siguiente paso hacia una carrera exitosa.
+            ¡Tu futuro te espera!
+          </h4>
+        </div>
+      </li>
+      <li id="carruselTres" class="carruseles">
+        <div class="contenedor">
+          <h3>Conecta con Empleadores de Alto Nivel</h3>
+          <h4>Descubre oportunidades de empleo con empresas líderes.
+            Establece conexiones significativas y potencia tu carrera al
+            conectarte con empleadores que valoran tu talento y experiencia.
+          </h4>
+        </div>
+      </li>
+      <li id="carruselCuatro" class="carruseles">
+        <div class="contenedor">
+          <h3>Postúlate y Destaca en tu Carrera</h3>
+          <h4>Carga tu currículum, postúlate para emocionantes vacantes y
+            destaca entre los demás candidatos. Da un impulso significativo
+            a tu carrera profesional con nuestras oportunidades laborales.
+          </h4>
+        </div>
+      </li>
+
+      
+ <!-- BOTONES -->
+ <a id="botonAnterior">
+  <i class="fas fa-angle-left" aria-hidden="true"></i>
+</a>
+<a id="botonSiguiente">
+  <i class="fas fa-angle-right" aria-hidden="true"></i>
+</a>
+</ul>
+
+      <section id="categorias">
+        <div class="contenedor">
+          <article id="capacitacionesCat">
+            <p>Jóvenes Profesionales »</p>
+          </article>
+          <article id="equipoCat">
+            <p>Puestos ejecutivos y directivos »</p>
+          </article>
+          <article id="capacitacionesCat">
+            <p>Jóvenes Profesionales »</p>
+          </article>
+        </div>
+      </section>
     </main>
-    <br><br>
+
+
+    <!-- EMPRESAS BUSCANDO TALENTOS -->
+<section id="talentos">
+  <article class="contenedor">
+    <h2>> Empresas buscando talentos</h2>
+      <ul>
+        <li><img src="{% static 'usuario/img/python.png' %}" alt="Python"></li>
+        <li><img src="{% static 'usuario/img/vue.png' %}" alt="Vue"></li>
+        <li><img src="{% static 'usuario/img/go.png' %}" alt="Go"></li>
+        <li><img src="{% static 'usuario/img/angular.png' %}" alt="Angular"></li>
+        <li><img src="{% static 'usuario/img/react.png' %}" alt="React"></li>
+      </ul>
+      <button class="boton"><p>ver todas las empresas</p></button>
+  </article>
+</section>
+
+
+<!-- CREA TU CUENTA-->
+<section id="creaTuCuenta">
+  <article class="contenedor">
+    <img class="mobileImg" src="img/creaTuCuenta.jpg" alt="">
+    <ul>
+      <h2>Creá tu cuenta y encontrá el trabajo que buscás.</h2>
+      <li>
+        <i class="fa-solid fa-rocket"></i>
+        <p>Ingresá en la opción Crear cuenta, escribí tus datos y confirmalos.</p>
+      </li>
+      <li>
+        <i class="fa-solid fa-pen"></i>
+        <p>Completá la información principal de tu perfil a través de las preguntas
+          por pasos que te haremos Inmediatamente después de que te registres.</p>
+      </li>
+      <li>
+        <i class="fa-regular fa-square-check"></i>
+        <p>Postulate a los trabajos que más te interesen
+          y seguí el proceso de tus postulaciones.</p>
+      </li>
+      <li>
+        <i class="fa-regular fa-floppy-disk"></i>
+        <p>Recordá mantener tu información actualizada desde la sección de tu perfil. </p>
+      </li>
+      <button class="boton"><p>Quiero crear mi cuenta</p></button>
+    </ul>
+    <div class="ilustracion"></div>
+  </article>
+
+</section>
+
+{% endblock %}
+<!-- NOTICIAS -->
+<section id="noticias">
+  <article class="contenedor">
+    <h2>> Novedades en nuestro Blog de Noticias</h2>
+
+    <ul>
+      <li>
+        <img src="{% static 'usuario/img/noticia-01.jpg' %}" alt="">
+        <h3>Título de esta publicación</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.</p>
+      </li>
+      <li>
+        <img src="{% static 'usuario/img/noticia-02.jpg' %}" alt="">
+        <h3>Título de esta publicación</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.</p>
+      </li>
+      <li>
+        <img src="{% static 'usuario/img/noticia-01.jpg' %}" alt="">
+        <h3>Título de esta publicación</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.</p>
+      </li>
+      <li>
+        <img src="{% static 'usuario/img/noticia-02.jpg' %}" alt="">
+        <h3>Título de esta publicación</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.</p>
+      </li>
+    </ul>
+
+    <button class="boton"><p>Quiero crear mi cuenta</p></button>
+
+  </article>
+</section>
+
+
   
     
-    {% endblock %}
+   
 
     <!-- <footer> Pie de pagina -->
-  <footer>
-    <h3>Redes</h3>
-    <div class="social-icons">
-      <a href="#"><img src="{% static 'usuario/vendor/' %}" alt="Facebook"></a>
-      <a href="#"><img src="{% static 'usuario/vendor/' %}" alt="Twitter"></a>
-      <a href="#"><img src="{% static 'usuario/vendor/' %}" alt="Instagram"></a>
-      <a href="#"><img src="{% static 'usuario/vendor/' %}" alt="LinkedIn"></a>
-    </div>
-    <p>&copy; 2023 Tu Oficina de Empleo</p>
-    <p><a href='/pages/terminos'>Terminos y Condiciones</a>, Politica de Privacidad</p>
-  </footer>
+      <footer>
+        <div class="contenedor">
+          <h2>Seguínos en las redes para encontrar más oportunidades laborales</h2>
+          <div class="redes">
+            <ul>
+              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>     
+          </div>
+        </div>
+        <div class="copyright">
+          <div class="contenedor">
+            <p>© 2023 Emplea Talento</p>
+            <p><a href="#terminos">Terminos y Condiciones</a> | Politicas de Privacidad</p>
+          </div>
+        </div>
+      </footer>
+      
+      <!-- ACÁ CARGAMOS LOS JS -->
+      <script src="{% static 'usuario/js/cositas.js' %}"></script>
 
 </body>
 
