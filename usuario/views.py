@@ -7,10 +7,12 @@ def home(request):
 def contacto(request):
     return render(request,"usuario/contacto.html")
 
-# def postularse(request):
-#     pass
+def postularse(request):
+    return render(request, "usuario/postulantes.html")
 
 
+def empresas(request):
+    return render(request, "usuario/empresas.html")
 
-# def empresas(request):
-#     pass
+def somos( request):
+    return render(request, "usuario/somos.html")

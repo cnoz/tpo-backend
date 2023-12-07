@@ -7,35 +7,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta Comisión: 23515 - Grupo: 13 - Integrantes: RAMÓN A. FUENTES (lider), FABIAN CORREA.>
-  <link rel="shortcut icon" href="images/LogoET-2.png" type="image/x-icon">
-  <link rel="stylesheet" href="{% static 'usuario/css/styles.css' %}">
+  <link rel="shortcut icon" href="{% static 'usuario/img/icono.svg' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'usuario/css/estilo.css' %}">
 
   <title>{% block title %} Inicio {% endblock %} </title>
 
-  {% load static %}
 
 </head>
 
 <body>
   <!-- Cabecera -->
-  <header class="menu-header">
+  <!-- <header class="menu-header">
     <div class="header-content">
       <div class="logo">
         <img src="images/LogoET-1.jpg" alt="Descripción del logo" width="100" height="50">
         <h1>Emplea Talento</h1>
           <nav class="user-options">
             <ul>
-              <li><a href='{% url "home" %}'>Home</a></li>
+              <li><a href='{% url "home" %}'>Home</a></li> -->
               <!-- <li><a href=' "empresas" '>Empresas</a></li>
               <li><a href=' "postulante" '> Postulantes</a></li>   -->
 
-              <li><a href='{% url "contacto" %}'>Contacto</a></li>
+              <!-- <li><a href='{% url "contacto" %}'>Contacto</a></li>
             </ul>
           </nav>
       </div>  
     </div>
+  </header> -->
+  
+  <header>
+    <section class="contenedor">
+      <div id="logo">
+        <a href="{% url 'home' %} ">
+          <img src="{% static 'usuario\img\logo.svg' %}" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href='{% url "home" %}'>Inicio</a></li>
+          <li><a href="{% url 'somos' %} ">Quienes Somos</a></li>
+          <li><a href="{% url 'empresas' %}">Empresas</a></li>
+          <li><a href='{% url "postularse" %}'>Postulantes</a></li>
+          <li><a href='{% url "contacto" %}'>Contacto</a></li>
+        </ul>
+        <!-- <ul>
+          <li><button class="botonDos">Crear Cuenta</button></li>
+          <li><button class="boton">Iniciar Sesión</button></li>
+        </ul> -->
+      </nav>
+    </section>
   </header>
-
 
 
 
