@@ -544,7 +544,7 @@ footer h3 {
   background:linear-gradient(45deg, #0c2955, #60bdd9);
 }
 #empresas:before {
-  content:"";
+
   position:absolute;
   top:0;
   right:0;
