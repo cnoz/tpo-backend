@@ -11,8 +11,8 @@ def postularse(request):
     return render(request, "usuario/postulantes.html")
 
 
-def empresas(request):
-    return render(request, "usuario/empresas.html")
+# def empresas(request):
+#     return render(request, "usuario/empresas.html")
 
 def somos( request):
     return render(request, "usuario/somos.html")
