@@ -8,10 +8,9 @@
 
 {% block content %}
 <main id="postulantes">
-<p >
-    Postulate x aca .
-</p>
-<br>
+
+
+<div class="postulantesdiv">
 
 {% for usuario in usuarios  %}
 <p>Nombre: {{usuario.nombre|title}}</p>
@@ -24,7 +23,10 @@
                 <a href="{% url 'postularse' %}">link |</a>
                 {% endif %}
 <img src="{{usuario.image.url}}" alt="" style="width: 128px;">
+<br><br>
 {%endfor%}
+
+</div>
 
 </main>
 {% endblock  %}

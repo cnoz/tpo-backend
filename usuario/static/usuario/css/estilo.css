@@ -599,15 +599,20 @@ footer h3 {
 #postulantes {
   height:100vh;
   display:flex;
-  flex-direction:column;
+  flex-direction:column ;
+  
   align-items:center;
   justify-content:center;
   margin:0 auto;
   background:linear-gradient(-45deg, #0c2955, #e90066);
-
+  
 }
-#postulantes:before {
+#postulantesdiv{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
 
+#postulantes:before {
   position:absolute;
   top:0;
   right:0;
