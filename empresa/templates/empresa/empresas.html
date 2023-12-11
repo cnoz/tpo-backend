@@ -9,10 +9,7 @@
 {% block content %}
     
 <main id="empresas">
-<p >
-    Pone a tu empresa en el mapa, 
-    y consegui los mejores postulantes.
-</p>
+
 
 <hr><hr><hr>
 
@@ -25,14 +22,17 @@
 <p>Beneficios: {{datosempresa.beneficios}}</p>
 <p>Requisitos: {{datosempresa.requisitos}}</p>
 <p>Puesto a cubrir: {{datosempresa.puestoBuscado}}</p>
-<img src="{{datosempresa.image.url}}" alt="camion coca-cola">
 
-
-<a href="http://google.com" target= _blank>Más información</a>
-<a href="https://agenciadeaprendizaje.bue.edu.ar/codo-a-codo/" target="_blank">Codo a Codo</a>
+{% if datosempresa.link %}
+                <a href="{{datosempresa.link}}" target="_blank">link |</a>
+                {% else %}
+                <a href="{% url 'empresas' %}">link |</a>
+                {% endif %}
+<img src="{{datosempresa.image.url}}" alt="camion coca-cola" style="width: 200px;">
+<hr>
 
 {% endfor%}
-<hr>
+
 </main>
 
 
