@@ -730,6 +730,7 @@ footer h3 {
   background-size: cover;
   background-repeat: no-repeat;
   transition: .5s ease-in;
+  z-index: -1;
 }
 
 #postulantes h1 {
