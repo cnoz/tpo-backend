@@ -1,40 +1,31 @@
-{% extends 'usuario/index.html' %}
-{% load static %}
+{% extends 'usuario/index.html' %} {% load static %} {% block title %} Contacto
+{% endblock %} {% block content %}
 
-{% block title %}
-    Contacto
-{% endblock  %}
-    
-
-{% block content %}
-    
 <main id="empresas">
-<p >
-    Pone a tu empresa en el mapa, 
-    y consegui los mejores postulantes.
-</p>
+  <p>Pone a tu empresa en el mapa, y consegui los mejores postulantes.</p>
 
-<hr><hr><hr>
+  <hr />
+  <a href="http://google.com" target="_blank">Pulse aqui</a>
+  <hr />
+  <hr />
 
+  {% for datosempresa in datosempresas %}
 
-{% for datosempresa in datosempresas %}
+  <p>Nombre: {{datosempresa.nombreEmpresa}}</p>
+  <p>Datos de la empresa: {{datosempresa.descripcionEmpresa}}</p>
+  <p>Ubicacion: {{datosempresa.ubicacion}}</p>
+  <p>Beneficios: {{datosempresa.beneficios}}</p>
+  <p>Requisitos: {{datosempresa.requisitos}}</p>
+  <p>Puesto a cubrir: {{datosempresa.puestoBuscado}}</p>
+  <img src="{{datosempresa.image.url}}" alt="camion coca-cola" />
 
-<p>Nombre: {{datosempresa.nombreEmpresa}}</p>
-<p>Datos de la empresa: {{datosempresa.descripcionEmpresa}}</p>
-<p>Ubicacion: {{datosempresa.ubicacion}}</p>
-<p>Beneficios: {{datosempresa.beneficios}}</p>
-<p>Requisitos: {{datosempresa.requisitos}}</p>
-<p>Puesto a cubrir: {{datosempresa.puestoBuscado}}</p>
-<img src="{{datosempresa.image.url}}" alt="camion coca-cola">
+  <a href="http://google.com" target="_blank">Más información</a>
+  <a href="https://agenciadeaprendizaje.bue.edu.ar/codo-a-codo/" target="_blank"
+    >Codo a Codo</a
+  >
 
-<a href="http://google.com" target= _blank>Más información</a>
-<a href="https://agenciadeaprendizaje.bue.edu.ar/codo-a-codo/" target="_blank">Codo a Codo</a>
-
-{% endfor%}
-<hr>
+  {% endfor%}
+  <hr />
 </main>
 
-<p>Este link funciona, lo pongo en el main y deja de funcionar</p>
-<a href="http://google.com" target="_blank">Pulse aqui</a>
-
-{% endblock  %}
+{% endblock %}
