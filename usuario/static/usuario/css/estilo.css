@@ -607,7 +607,7 @@ footer h3 {
 
 }
 #postulantes:before {
-  content:"";
+
   position:absolute;
   top:0;
   right:0;
@@ -671,7 +671,7 @@ footer h3 {
   background:linear-gradient(-45deg, #ffffff, #cccccc);
 }
 #contacto:before {
-  content:"";
+  
   position:absolute;
   top:0;
   right:0;
