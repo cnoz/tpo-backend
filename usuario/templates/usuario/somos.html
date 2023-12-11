@@ -1,0 +1,97 @@
+{% extends 'usuario/index.html' %}
+{% load static %}
+
+{% block title %}
+    Quienes somos.
+{% endblock  %}
+    
+
+{% block content %}
+    
+<!-- MAIN -->
+<main id="somos">
+    <article class="contenedor">
+      <img class="mobileImg" src="{% static 'usuario/img/somos.jpg' %}" alt="">
+  
+      <article>
+        <h1>Quiénes somos</h1>
+        <p>Desde nuestra fundación en 2004, hemos estado comprometidos con la
+          misión de facilitar el acceso a empleos significativos. A lo largo de
+          los años, hemos conectado a miles de profesionales con oportunidades
+          que han transformado sus vidas.
+        <br>
+          Nuestros valores son el núcleo de todo lo que hacemos. La integridad
+          guía nuestra ética, la innovación impulsa nuestra mejora constante,
+          la empatía nos permite entender tus necesidades y la colaboración
+          asegura que trabajemos juntos para alcanzar tus metas.
+        <br><br>
+          Ofrecemos una amplia gama de servicios diseñados para apoyarte en cada
+          paso de tu búsqueda laboral. Desde encontrar oportunidades que se ajusten
+          a tu perfil hasta brindarte herramientas para destacar en el proceso de
+          selección, estamos aquí para ayudarte.
+        <br><br>
+          Nuestros resultados hablan por sí mismos. Hemos ayudado a más de
+          2000 clientes satisfechos a encontrar empleo y seguimos creciendo.
+          Tu éxito es nuestro mayor logro.
+        <br><br>
+        <p>
+          En <strong>Emplea Talento</strong>, estamos emocionados por la oportunidad de acompañarte
+          en tu búsqueda laboral. Juntos, podemos lograr grandes cosas.
+          ¡Gracias por confiar en nosotros!
+        </p> 
+        <hr>
+        <p>Gracias por acompañarnos!</p>
+      </article>
+  
+      <div class="ilustracionSomos"></div>
+  
+    </article>
+  </main>
+  
+  <!-- NOTICIAS -->
+<section id="noticias">
+    <article class="contenedor">
+      <h2>> Novedades en nuestro Blog de Noticias</h2>
+  
+      <ul>
+        <li>
+          <img src="{% static 'usuario/img/noticia-01.jpg' %}" alt="">
+          <h3>Título de esta publicación</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</p>
+        </li>
+        <li>
+          <img src="{% static 'usuario/img/noticia-02.jpg' %}" alt="">
+          <h3>Título de esta publicación</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</p>
+        </li>
+        <li>
+          <img src="{% static 'usuario/img/noticia-01.jpg' %}" alt="">
+          <h3>Título de esta publicación</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</p>
+        </li>
+        <li>
+          <img src="{% static 'usuario/img/noticia-02.jpg' %}" alt="">
+          <h3>Título de esta publicación</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.</p>
+        </li>
+      </ul>
+  
+      <button class="boton"><p>Quiero crear mi cuenta</p></button>
+  
+    </article>
+  </section>
+
+{% endblock  %}
+    
