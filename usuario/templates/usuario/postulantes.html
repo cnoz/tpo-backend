@@ -11,6 +11,21 @@
 <p >
     Postulate x aca .
 </p>
+<br>
+
+{% for usuario in usuarios  %}
+<p>Nombre: {{usuario.nombre|title}}</p>
+<p>Apellido: {{usuario.apellido|title}}</p>
+<p>Acerca de mi: {{usuario.acercaDeMi|title}}</p>
+<p>Capacitacion: {{usuario.capacitaciones|title}}</p>
+{% if datosempresa.link %}
+                <a href="{{usuario.link}}" target="_blank">link |</a>
+                {% else %}
+                <a href="{% url 'postularse' %}">link |</a>
+                {% endif %}
+<img src="{{usuario.image.url}}" alt="" style="width: 128px;">
+{%endfor%}
+
 </main>
 {% endblock  %}
     

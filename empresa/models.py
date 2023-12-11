@@ -13,6 +13,7 @@ class EmpresaDatos(models.Model):
     puestoBuscado=models.CharField(max_length=200, verbose_name="Puesto buscado")
     requisitos= models.TextField()
     beneficios= models.TextField()
+    link= models.URLField(verbose_name="enlace", null =True, blank = True)
     image= models.ImageField(verbose_name="Imagen", upload_to="projectempresa")
     creacion= models.DateTimeField(auto_now_add=True,verbose_name="Fecha de creacion")
     actualizacion= models.DateTimeField(auto_now=True,verbose_name="Fecha de modificacion")
