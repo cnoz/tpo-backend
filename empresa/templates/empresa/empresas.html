@@ -2,42 +2,54 @@
 {% load static %}
 
 {% block title %}
-    Contacto
+    Empresas
 {% endblock  %}
     
 
 {% block content %}
     
 <main id="empresas">
-
-
-<hr><hr><hr>
-
-
-{% for datosempresa in datosempresas %}
-
-<p>Nombre: {{datosempresa.nombreEmpresa}}</p>
-<p>Datos de la empresa: {{datosempresa.descripcionEmpresa}}</p>
-<p>Ubicacion: {{datosempresa.ubicacion}}</p>
-<p>Beneficios: {{datosempresa.beneficios}}</p>
-<p>Requisitos: {{datosempresa.requisitos}}</p>
-<p>Puesto a cubrir: {{datosempresa.puestoBuscado}}</p>
-        {% if datosempresa.email == "none"%}
-            
-        {% else %}
-            <p>Correo de contactoa. {{datosempresa.email}}</p>
-        {% endif %}
-
+<div class="contenedor">
+  <h1>> Empresas buscando talentos</h1>
+  <ul>
+    {% for datosempresa in datosempresas %}
+    <li>
+      <article id="{{datosempresa.nombreEmpresa}}" class="empresa">
+        <img src="{{datosempresa.image.url}}" alt="{{datosempresa.nombreEmpresa}}">
+        <h2>Nombre: {{datosempresa.nombreEmpresa}}</h2>
+        <ol>
+          <li>
+            <p><b>Datos de la empresa:</b> {{datosempresa.descripcionEmpresa}}</p>
+          </li>
+          <li>
+            <p><b>Ubicacion:</b> {{datosempresa.ubicacion}}</p>
+          </li>
+          <li>
+            <p><b>Beneficios:</b> {{datosempresa.beneficios}}</p>
+          </li>
+          <li>
+            <p><b>Requisitos:</b> {{datosempresa.requisitos}}</p>
+          </li>
+          <li>
+            <p><b>Puesto a cubrir:</b> {{datosempresa.puestoBuscado}}</p>
+          </li>
+        </ol>
         {% if datosempresa.link %}
-        <a href="{{datosempresa.link}}" target="_blank">link |</a>
+        <button class="boton">
+          <a href="{{datosempresa.link}}" target="_blank">> ver empresa</a>
+        </button>
         {% else %}
-        <a href="{% url 'empresas' %}">link |</a>
+        <button class="boton">
+          <a href="{% url 'empresas' %}">> ver empresa</a>
+        </button>
         {% endif %}
-<img src="{{datosempresa.image.url}}" alt="camion coca-cola" style="width: 200px;">
-<hr>
+      </article>
+    </li>
+    {% endfor%}
+  </ul>
 
-{% endfor%}
-
+</div>
+  
 </main>
 
 

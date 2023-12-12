@@ -1,0 +1,45 @@
+{% extends 'usuario/index.html' %}
+{% load static %}
+
+{% block title %}
+    Contacto
+{% endblock  %}
+    
+
+{% block content %}
+    
+<main id="empresas">
+
+
+<hr><hr><hr>
+
+
+{% for datosempresa in datosempresas %}
+
+<p>Nombre: {{datosempresa.nombreEmpresa}}</p>
+<p>Datos de la empresa: {{datosempresa.descripcionEmpresa}}</p>
+<p>Ubicacion: {{datosempresa.ubicacion}}</p>
+<p>Beneficios: {{datosempresa.beneficios}}</p>
+<p>Requisitos: {{datosempresa.requisitos}}</p>
+<p>Puesto a cubrir: {{datosempresa.puestoBuscado}}</p>
+        {% if datosempresa.email == "none"%}
+            
+        {% else %}
+            <p>Correo de contactoa. {{datosempresa.email}}</p>
+        {% endif %}
+
+        {% if datosempresa.link %}
+        <a href="{{datosempresa.link}}" target="_blank">link |</a>
+        {% else %}
+        <a href="{% url 'empresas' %}">link |</a>
+        {% endif %}
+<img src="{{datosempresa.image.url}}" alt="camion coca-cola" style="width: 200px;">
+<hr>
+
+{% endfor%}
+
+</main>
+
+
+
+{% endblock  %}
