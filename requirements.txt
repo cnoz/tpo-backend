@@ -1,11 +1,2 @@
-Package           Version
------------------ -------
-asgiref           3.7.2
-Django            5.0
-Pillow            10.1.0
-pip               23.3.1
-setuptools        68.2.2
-sqlparse          0.4.4
-typing_extensions 4.8.0
-tzdata            2023.3
-wheel             0.41.3
+Django==5.0
+Pillow==10.1.0
