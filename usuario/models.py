@@ -5,6 +5,7 @@ from django.db import models
 class UsuarioDato(models.Model):
     nombre=models.CharField(max_length=100, verbose_name="Nombre")
     apellido= models.CharField(max_length=100, verbose_name="Apellido")
+    email= models.EmailField(default="none", max_length=30, verbose_name="correo electronico.")
     acercaDeMi= models.TextField()
     capacitaciones= models.TextField()
     image= models.ImageField(upload_to="datosusuarios",verbose_name="Imagen")
