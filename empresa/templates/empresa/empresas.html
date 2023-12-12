@@ -33,6 +33,13 @@
           <li>
             <p><b>Puesto a cubrir:</b> {{datosempresa.puestoBuscado}}</p>
           </li>
+          <li>
+            {% if datosempresa.email == "none"%}
+            
+          {% else %}
+              <p><b>Correo de contacto.</b> {{datosempresa.email}}</p>
+          {% endif %}
+          </li>
         </ol>
         {% if datosempresa.link %}
         <button class="boton">
