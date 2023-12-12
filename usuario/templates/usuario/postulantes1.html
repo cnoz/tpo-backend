@@ -1,0 +1,36 @@
+{% extends 'usuario/index.html' %}
+{% load static %}
+
+{% block title %}
+    Contacto
+{% endblock  %}
+    
+
+{% block content %}
+<main id="postulantes">
+
+
+
+{% for usuario in usuarios  %}
+<p>Nombre: {{usuario.nombre|title}}</p>
+<p>Apellido: {{usuario.apellido|title}}</p>
+    {% if usuario.email == "none" %}
+
+    {% else%}
+        <p>Correo de contacto: {{usuario.email}}</p>
+    {% endif%}
+    
+<p>Acerca de mi: {{usuario.acercaDeMi|title}}</p>
+<p>Capacitacion: {{usuario.capacitaciones|title}}</p>
+                {% if datosempresa.link %}
+                <a href="{{usuario.link}}" target="_blank">link |</a>
+                {% else %}
+                <a href="{% url 'postularse' %}">link |</a>
+                {% endif %}
+<img src="{{usuario.image.url}}" alt="" style="width: 128px;">
+<br><br>
+{%endfor%}
+
+</main>
+{% endblock  %}
+    

@@ -328,6 +328,8 @@ nav a:hover {
   align-items:center;
   width:100%;
 }
+#talentos ul li {
+}
 #talentos ul li img {
   width:50px;
 }
@@ -477,8 +479,9 @@ footer h3 {
   background:#fff;
   display:flex;
   flex-direction:column;
+  width:100%;
   margin:0 0 60px 0;
-  padding:80px 20px 60px 20px;
+  padding-top:80px;
   gap:20px;
   flex-direction:row;
   background-image:url("../img/somos.png");
@@ -528,63 +531,41 @@ footer h3 {
 
 
 /* ------------------------------
-      ESTILOS DE EMPRESAS Y POSTULANTES
+      ESTILOS DE EMPRESAS
 -------------------------------- */
 
-#empresas, #postulantes {
+#empresas {
+  height:100vh;
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
   margin:0 auto;
-  padding:120px 0 60px 0;
+  background:linear-gradient(45deg, #0c2955, #60bdd9);
+}
+#empresas:before {
+
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-image:url("../img/lineas.svg");
   mix-blend-mode:multiply;
   background-size:cover;
   background-repeat:no-repeat;
   transition:.5s ease-in;
 }
-#empresas {
-  background:url("../img/lineas.svg"), linear-gradient(45deg, #0c2955, #60bdd9);
-}
-#postulantes {
-  background:url("../img/lineas.svg"), linear-gradient(-45deg, #0c2955, #e90066);
-
-}
-#empresas h1, #postulantes h1 {
+#empresas h1 {
   color:#fafafa;
   font-size:2em;
 }
-#empresas .contenedor, #postulantes .contenedor {
+#empresas .contenedor, #empresas form {
   z-index:99;
   display:flex;
   flex-direction:column;
   align-items:center;
 }
-#empresas ul, #postulantes ul {
-  display:grid;
-  box-sizing: border-box;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap:20px;
-}
-.empresa, .postulante {
-  background:#fafafa;
-  padding:20px;
-  border-radius:4px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.empresa .boton a, .postulante .boton a {
-  color:#fafafa;
-}
-.empresa img, .postulante img {
-  max-height:180px;
-}
-.empresa img, .empresa ol, .empresa h2,
-.postulante img, .postulante ol, .postulante h2 {
-  margin:0 0 10px 0;
-}
-/*
 #empresas form {
   background:#fafafa;
   box-shadow:0 0 20px rgba(0,0,0,0.1);
@@ -605,14 +586,74 @@ footer h3 {
 #ayudaForm a:hover {
   color:#e90066 !important;
 }
-*/
-/* --------------------------------------------
-    HASTA ACÁ ESTILOS DE EMPRESAS Y POSTULANTES
---------------------------------------------- */
+/* ------------------------------
+    HASTA ACÁ ESTILOS DE EMPRESAS
+-------------------------------- */
 
 
 /* +++++++++++++++++++++++++++++++++ ----------------------------- ++++++++++++++++++++++++++++++++++++ */
 
+/* ------------------------------
+      ESTILOS DE POSTULANTES
+-------------------------------- */
+#postulantes {
+  height:100vh;
+  display:flex;
+  flex-direction:column ;
+  
+  align-items:center;
+  justify-content:center;
+  margin:0 auto;
+  background:linear-gradient(-45deg, #0c2955, #e90066);
+  
+}
+#postulantesdiv{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+#postulantes:before {
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  background-image:url("../img/lineas.svg");
+  mix-blend-mode:multiply;
+  background-size:cover;
+  background-repeat:no-repeat;
+  transition:.5s ease-in;
+}
+#postulantes h1 {
+  color:#fafafa;
+  font-size:2em;
+}
+#postulantes .contenedor, #postulantes form {
+  z-index:99;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+#postulantes form {
+  background:#fafafa;
+  box-shadow:0 0 20px rgba(0,0,0,0.1);
+  border-radius:8px;
+  padding:40px 30px;
+  gap:15px;
+  border:0px solid;
+}
+#postulantes form input {
+  padding:10px 20px;
+}
+#ayudaForm {
+  color:#fafafa;
+}
+#ayudaForm a {
+  color:#fafafa;
+}
+#ayudaForm a:hover {
+  color:#e90066 !important;
+}
 /* ----------------------------------
     HASTA ACÁ ESTILOS DE POSTULANTES
 ---------------------------------- */
@@ -625,6 +666,7 @@ footer h3 {
       ESTILOS DE CONTACTO
 -------------------------------- */
 #contacto {
+  height:100vh;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -634,6 +676,7 @@ footer h3 {
   background:linear-gradient(-45deg, #ffffff, #cccccc);
 }
 #contacto:before {
+  
   position:absolute;
   top:0;
   right:0;
@@ -697,15 +740,15 @@ footer h3 {
 }
 
 
+/* +++++++++++++++++++++++++++++++++ ----------------------------- ++++++++++++++++++++++++++++++++++++ */
 
 
 /* ------------------------------
-ESTILOS DE CONTACTO
+      ESTILOS DE CONTACTO
 -------------------------------- */
 
 
 
-/* +++++++++++++++++++++++++++++++++ ----------------------------- ++++++++++++++++++++++++++++++++++++ */
 
 
 
@@ -715,19 +758,9 @@ ESTILOS DE CONTACTO
             RESPONSIVE
 -----------------------------------
 -------------------------------- */
-@media(max-width:800px){
-  #somos {
-    background-image:none; 
-  }
-  #somos article {
-    width:100%;
-  }  
-  #somos .ilustracionSomos {
-    display:none;
-  }
-}
 
-@media(max-width:640px){
+@media(max-width:480px){
+
   .contenedor {
     max-width:90%;
   }
@@ -796,19 +829,6 @@ ESTILOS DE CONTACTO
     text-align:center;
   }
 
-  /* QUIENES SOMOS*/
-  #somos .contenedor {
-    flex-direction:column;
-  }
-
-  /* EMPRESAS Y POSTULANTES */
-  #empresas ul, #postulantes ul {
-    grid-template-columns: 1fr 1fr; 
-  }
-  .empresa img, .postulante img {
-    width:100%;
-  }
-
   /* --------------- */
   /* PÁGINA CONTACTO */
   /* --------------- */
@@ -829,9 +849,3 @@ ESTILOS DE CONTACTO
   }
 }
 
-@media(max-width:480px){
-  /* EMPRESAS Y POSTULANTES */
-  #empresas ul, #postulantes ul {
-    grid-template-columns: 1fr; 
-  }
-}

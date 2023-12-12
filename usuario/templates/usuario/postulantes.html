@@ -2,35 +2,49 @@
 {% load static %}
 
 {% block title %}
-    Contacto
+    Postulantes
 {% endblock  %}
     
 
 {% block content %}
 <main id="postulantes">
+  <div class="contenedor">
+    <h1>> Empresas buscando talentos</h1>
+    <ul>
+      {% for usuario in usuarios  %}
+      <li>
+        <article id="{{usuario.nombre}}" class="postulante">
+          <img src="{{usuario.image.url}}" alt="{{usuario.nombre}}">
+          <h2>Nombre: {{usuario.nombre|title}} {{usuario.apellido|title}}</h2>
+          <ol>
+            <li>
+              <p><b>Acerca de mi:</b> {{usuario.acercaDeMi|title}}</p>
+            </li>
+            <li>
+              <p><b>Capacitacion:</b> {{usuario.capacitaciones|title}}</p>
+            </li>
+            <li>
+              {% if usuario.email == "none" %}
 
-
-
-{% for usuario in usuarios  %}
-<p>Nombre: {{usuario.nombre|title}}</p>
-<p>Apellido: {{usuario.apellido|title}}</p>
-    {% if usuario.email == "none" %}
-
-    {% else%}
-        <p>Correo de contacto: {{usuario.email}}</p>
-    {% endif%}
-    
-<p>Acerca de mi: {{usuario.acercaDeMi|title}}</p>
-<p>Capacitacion: {{usuario.capacitaciones|title}}</p>
-                {% if datosempresa.link %}
-                <a href="{{usuario.link}}" target="_blank">link |</a>
-                {% else %}
-                <a href="{% url 'postularse' %}">link |</a>
-                {% endif %}
-<img src="{{usuario.image.url}}" alt="" style="width: 128px;">
-<br><br>
-{%endfor%}
-
+                {% else%}
+                    <p><b>Correo de contacto:</b> {{usuario.email}}</p>
+                {% endif%}
+            </li>
+          </ol>
+          {% if datosempresa.link %}
+          <button class="boton">
+            <a href="{{usuario.link}}" target="_blank">link</a>
+          </button>
+          {% else %}
+          <button class="boton">
+            <a href="{% url 'postularse' %}">link</a>
+          </button>
+          {% endif %}
+        </article>
+      </li>
+      {%endfor%}
+    </ul>
+  </div>
 </main>
 {% endblock  %}
     
