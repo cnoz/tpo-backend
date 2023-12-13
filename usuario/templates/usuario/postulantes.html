@@ -9,12 +9,12 @@
 {% block content %}
 <main id="postulantes">
   <div class="contenedor">
-    <h1>> Empresas buscando talentos</h1>
+    <h1>> Talentos disponibles</h1>
     <ul>
       {% for usuario in usuarios  %}
       <li>
         <article id="{{usuario.nombre}}" class="postulante">
-          <img src="{{usuario.image.url}}" alt="{{usuario.nombre}}">
+          <img class="postulante-img" src="{{usuario.image.url}}" alt="{{usuario.nombre}}">
           <h2>Nombre: {{usuario.nombre|title}} {{usuario.apellido|title}}</h2>
           <ol>
             <li>
