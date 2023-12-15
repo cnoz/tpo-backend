@@ -6,8 +6,8 @@ from  .forms import FormUsuario
 def home(request):
     return render(request,"usuario/index.html")
 
-def contacto(request):
-    return render(request,"usuario/contacto.html")
+def contacto1(request):
+    return render(request,"usuario/contacto1.html")
 
 def postularse(request):
     usuarios = UsuarioDato.objects.all()

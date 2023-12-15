@@ -18,6 +18,7 @@ from django.urls import path
 from usuario import views
 from empresa import views as empresa_views
 from django.conf import settings
+from contacto import views as contacto_views
 
 
 urlpatterns = [
@@ -25,8 +26,11 @@ urlpatterns = [
     path('somos',views.somos ,name="somos"),
     path('empresas',empresa_views.empresas ,name="empresas"),
     path('postularse',views.postularse ,name="postularse"),
-    path('contacto',views.contacto ,name="contacto"),
+    path('contacto1',views.contacto1 ,name="contacto1"),
     path('api_postulante',views.api_postulante ,name="api_postulante"),
+    
+    path('contacto', contacto_views.contacto, name= "contacto"),
+    
     path('admin/', admin.site.urls),
 ]
 

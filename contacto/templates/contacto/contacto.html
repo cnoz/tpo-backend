@@ -1,0 +1,48 @@
+{% extends 'usuario/index.html' %}
+{% load static %}
+
+{% block title %}
+    Contacto
+{% endblock  %}
+    
+
+{% block content %}
+<main id="contacto">
+    <article class="contenedor">    
+
+      {% if formulario.errors %}
+      <p style="color: red;"> Estan mal los datos, revisar </p>
+      {% endif %}
+
+      <form method="POST">
+        {% csrf_token %}
+        <h1>> Contactanos</h1>
+        <table>
+        {{formulario.as_table}}
+        </table>
+        
+        <!-- <div class="arriba">
+          <input type="text" id="nombre" placeholder="Carlos Perez">
+          <input type="email" id="email" placeholder="nombre@ejemplo.com">
+        </div>
+        <div class="abajo">
+          <input type="tel" id="telefono" placeholder="+54 1234 5678">
+          <input type="text" id="asunto" placeholder="Asunto">
+        </div>
+        <textarea name="mensaje" id="" cols="30" rows="10"></textarea> -->
+
+        <button class="boton" type="submit">Enviar</button>
+      </form>
+      <div id="masInfo">
+        <h2>Mayor información</h2>
+        <p>Uruguay 237</p>
+        <p>C1015ABE - CABA</p>
+        <p>+54 1234 5678</p>
+        <p>info@empleatalento.com.ar</p>
+        <p>Empieza a construir tu perfil profesional para encontrar las mejores oportunidades</p>
+        <p>¡Gracias por confiar en nosotros!</p>
+      </div>
+    </article>
+  </main>
+{% endblock  %}
+    
