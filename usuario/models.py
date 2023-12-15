@@ -5,10 +5,10 @@ from django.db import models
 class UsuarioDato(models.Model):
     nombre=models.CharField(max_length=100, verbose_name="Nombre")
     apellido= models.CharField(max_length=100, verbose_name="Apellido")
-    email= models.EmailField(default="none", max_length=30, verbose_name="correo electronico.")
+    email= models.EmailField(default="none@tumail.com",null=True,blank=True, max_length=30, verbose_name="correo electronico.")
     acercaDeMi= models.TextField()
     capacitaciones= models.TextField()
-    image= models.ImageField(upload_to="datosusuarios",verbose_name="Imagen")
+    image= models.ImageField(default='\Imagen-en-blanco.jpg', null=True, blank=True,upload_to="datosusuarios",verbose_name="Imagen")
     link= models.URLField(verbose_name="enlace", null =True, blank = True)
     creacion= models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacio")
     actualizacion = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificacion")

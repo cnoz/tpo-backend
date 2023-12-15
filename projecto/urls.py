@@ -26,6 +26,7 @@ urlpatterns = [
     path('empresas',empresa_views.empresas ,name="empresas"),
     path('postularse',views.postularse ,name="postularse"),
     path('contacto',views.contacto ,name="contacto"),
+    path('api_postulante',views.api_postulante ,name="api_postulante"),
     path('admin/', admin.site.urls),
 ]
 

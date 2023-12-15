@@ -1,0 +1,24 @@
+{% extends 'usuario/index.html' %}
+{% load static %}
+
+
+
+{% block title %}
+   Edita tus datos Postulantes
+{% endblock  %}
+
+{% block content %}
+
+
+<h1>Formulario de estudiantes</h1>
+    {% if formulario.errors %}
+    <p style="color: red;"> Estan mal los datos, revisar </p>
+    {% endif %}
+    <form method="POST">
+        {% csrf_token %}
+        <table>
+            {{ formulario.as_table }}
+        </table>
+        <button type="submit"> Registrar</button>
+    </form>
+{% endblock  %}

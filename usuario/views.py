@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import UsuarioDato
+from  .forms import FormUsuario
+
 # Create your views here.
 def home(request):
     return render(request,"usuario/index.html")
@@ -17,3 +19,25 @@ def postularse(request):
 
 def somos( request):
     return render(request, "usuario/somos.html")
+
+def api_postulante(request):
+    if request.method == "POST":
+        formulario = FormUsuario(request.POST)
+        if formulario.is_valid():
+            
+            informacion = formulario.cleaned_data
+            datousuario= UsuarioDato(nombre = informacion['nombre'], 
+                                    apellido = informacion['apellido'],
+                                    email=informacion['email'],
+                                    acercaDeMi = informacion['acercaDeMi'],
+                                    capacitaciones=informacion['capacitaciones'],
+                                    image= informacion['image'],
+                                    link= informacion['link'])
+            datousuario.save()
+            return redirect('postularse')
+    else:
+        formulario= FormUsuario()
+    return render (request, "usuario/api_postulante.html",{'formulario':formulario})
+    
+    
+    

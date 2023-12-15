@@ -24,14 +24,14 @@
               <p><b>Capacitacion:</b> {{usuario.capacitaciones|title}}</p>
             </li>
             <li>
-              {% if usuario.email == "none" %}
+              {% if usuario.email == "none@tumail.com" %}
 
                 {% else%}
                     <p><b>Correo de contacto:</b> {{usuario.email}}</p>
                 {% endif%}
             </li>
           </ol>
-          {% if datosempresa.link %}
+          {% if usuario.link %}
           <button class="boton">
             <a href="{{usuario.link}}" target="_blank">link</a>
           </button>
