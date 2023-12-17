@@ -12,8 +12,8 @@ class EmpresaDatos(models.Model):
     requisitos= models.TextField()
     beneficios= models.TextField()
     image= models.ImageField(default="\image-empresa-defautl.png",null=True,blank=True,verbose_name="Imagen", upload_to="projectempresa")
+    email= models.EmailField(default="none@tumail.com",null=True,blank=True ,max_length=30, verbose_name="Correo de contacto.")
     link= models.URLField(verbose_name="enlace", null =True, blank = True)
-    image= models.ImageField(verbose_name="Imagen", upload_to="projectempresa")
     creacion= models.DateTimeField(auto_now_add=True,verbose_name="Fecha de creacion")
     actualizacion= models.DateTimeField(auto_now=True,verbose_name="Fecha de modificacion")
     
