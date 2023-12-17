@@ -16,6 +16,7 @@ def contacto(request):
                                     mensaje= informacion['mensaje']
                                    )
             datocontacto.save()
+            
             return redirect ('/')
     
     else:
