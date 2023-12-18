@@ -14,7 +14,13 @@
       {% for usuario in usuarios  %}
       <li>
         <article id="{{usuario.nombre}}" class="postulante">
+          {% if usuario.image.url != none %}
           <img class="postulante-img" src="{{usuario.image.url}}" alt="{{usuario.nombre}}">
+          {% else %}
+          <img src="{% static 'usuario/img/imagen-en-blanco.jpg' %}" alt="">
+          {% endif %}
+
+
           <h2>Nombre: {{usuario.nombre|title}} {{usuario.apellido|title}}</h2>
           <ol>
             <li>
