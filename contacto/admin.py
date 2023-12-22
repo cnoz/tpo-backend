@@ -3,6 +3,7 @@ from .models import Contacto
 # Register your models here.
 
 class ContactoAdmin(admin.ModelAdmin):
-    readonly_fields= ("creacion")
-    
-admin.site.register(Contacto)
+    list_display=("nombre","email","asunto",)
+    search_fields=("nombre",)
+    readonly_fields= ("creacion",)
+admin.site.register(Contacto, ContactoAdmin)
