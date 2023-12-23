@@ -4,6 +4,7 @@ from .models import Contacto
 
 class ContactoAdmin(admin.ModelAdmin):
     list_display=("nombre","email","asunto",)
-    search_fields=("nombre",)
+    search_fields=("nombre","email")
     readonly_fields= ("creacion",)
+    date_hierarchy="creacion"
 admin.site.register(Contacto, ContactoAdmin)

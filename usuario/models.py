@@ -6,7 +6,7 @@ class UsuarioDato(models.Model):
     nombre=models.CharField(max_length=100, verbose_name="Nombre")
     apellido= models.CharField(max_length=100, verbose_name="Apellido")
     email= models.EmailField(default="none@tumail.com",null=True,blank=True, max_length=30, verbose_name="correo electronico.")
-    acercaDeMi= models.TextField()
+    acercaDeMi= models.TextField(verbose_name="Acerca de mi")
     capacitaciones= models.TextField()
     image= models.ImageField(default='\Imagen-en-blanco.jpg', null=True, blank=True,upload_to="datosusuarios",verbose_name="Imagen")
     link= models.URLField(verbose_name="enlace", null =True, blank = True)
@@ -14,7 +14,7 @@ class UsuarioDato(models.Model):
     actualizacion = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificacion")
     
     def __str__(self):
-        return f'{self.nombre} {self.apellido}'
+        return f'{self.nombre} - {self.apellido}'
     
     class Meta:
         verbose_name= "Datos de Usuario"

@@ -4,5 +4,8 @@ from .models import UsuarioDato
 
 class UsuarioAdmin(admin.ModelAdmin):
     readonly_fields= ("creacion","actualizacion")
-
-admin.site.register(UsuarioDato)
+    list_display=("nombre","apellido","email")
+    list_filter=("creacion",)    
+    date_hierarchy="creacion"
+    
+admin.site.register(UsuarioDato,UsuarioAdmin)
